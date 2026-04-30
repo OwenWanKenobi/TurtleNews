@@ -14,8 +14,9 @@ description: Independent turtle journalism, projects, and dispatches.
           <img src="{{ featured.cover_image | relative_url }}" alt="">
         </a>
         <div class="featured-copy">
+          {% assign featured_category_slug = featured.category | slugify %}
           <div class="eyebrow-row">
-            <a href="{{ '/category/' | append: featured.category | slugify | append: '/' | relative_url }}">{{ featured.category }}</a>
+            <a href="{{ '/category/' | append: featured_category_slug | append: '/' | relative_url }}">{{ featured.category }}</a>
             <time datetime="{{ featured.date | date_to_xmlschema }}">{{ featured.date | date: "%b %-d, %Y" }}</time>
           </div>
           <h1><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h1>

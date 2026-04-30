@@ -1,10 +1,11 @@
 <article class="article-card">
+  {% assign post_category_slug = post.category | slugify %}
   <a class="card-image" href="{{ post.url | relative_url }}" aria-label="{{ post.title }}">
     <img src="{{ post.cover_image | relative_url }}" alt="" loading="lazy">
   </a>
   <div class="card-body">
     <div class="eyebrow-row">
-      <a href="{{ '/category/' | append: post.category | slugify | append: '/' | relative_url }}">{{ post.category }}</a>
+      <a href="{{ '/category/' | append: post_category_slug | append: '/' | relative_url }}">{{ post.category }}</a>
       <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %-d, %Y" }}</time>
     </div>
     <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
