@@ -1,4 +1,12 @@
 (function () {
+  const script = document.currentScript;
+  const scriptPath = script ? new URL(script.src, window.location.href).pathname : "";
+  const basePath = scriptPath.replace(/\/assets\/js\/main\.js$/, "");
+
+  const withBasePath = function (path) {
+    return basePath + path;
+  };
+
   const menuButton = document.querySelector(".menu-toggle");
   const nav = document.querySelector("#site-nav");
 
@@ -44,7 +52,7 @@
         '<img src="' + item.cover_image + '" alt="" loading="lazy">',
         "</a>",
         '<div class="card-body">',
-        '<div class="eyebrow-row"><a href="/category/' + item.category.toLowerCase().replace(/[^a-z0-9]+/g, "-") + '/">' + escapeHTML(item.category) + "</a><time>" + escapeHTML(item.date) + "</time></div>",
+        '<div class="eyebrow-row"><a href="' + withBasePath("/category/") + item.category.toLowerCase().replace(/[^a-z0-9]+/g, "-") + '/">' + escapeHTML(item.category) + "</a><time>" + escapeHTML(item.date) + "</time></div>",
         '<h2><a href="' + item.url + '">' + escapeHTML(item.title) + "</a></h2>",
         "<p>" + escapeHTML(item.excerpt) + "</p>",
         '<div class="card-meta">By ' + escapeHTML(item.author) + "</div>",
@@ -54,7 +62,7 @@
     }).join("");
   };
 
-  fetch("/search.json")
+  fetch(withBasePath("/search.json"))
     .then(function (response) {
       return response.json();
     })
