@@ -1,0 +1,83 @@
+---
+layout: default
+title: Home
+description: Independent turtle journalism, projects, and dispatches.
+---
+{% assign featured = site.posts | first %}
+{% assign recent = site.posts | slice: 1, 6 %}
+
+<section class="home-hero">
+  <div class="container hero-grid">
+    {% if featured %}
+      <article class="featured-story">
+        <a class="featured-image" href="{{ featured.url | relative_url }}">
+          <img src="{{ featured.cover_image | relative_url }}" alt="">
+        </a>
+        <div class="featured-copy">
+          <div class="eyebrow-row">
+            <a href="{{ '/category/' | append: featured.category | slugify | append: '/' | relative_url }}">{{ featured.category }}</a>
+            <time datetime="{{ featured.date | date_to_xmlschema }}">{{ featured.date | date: "%b %-d, %Y" }}</time>
+          </div>
+          <h1><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h1>
+          <p>{{ featured.excerpt | strip_html }}</p>
+          <span class="card-meta">By {{ featured.author }}</span>
+        </div>
+      </article>
+    {% endif %}
+    <aside class="latest-panel" aria-label="Latest stories">
+      <div class="section-heading">
+        <h2>Latest</h2>
+        <a href="{{ '/news/' | relative_url }}">View all</a>
+      </div>
+      {% for post in recent limit: 4 %}
+        <article class="latest-item">
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span>{{ post.category }} / {{ post.date | date: "%b %-d" }}</span>
+        </article>
+      {% endfor %}
+    </aside>
+  </div>
+</section>
+
+<section class="category-feature">
+  <div class="container category-feature-grid">
+    {% for category in site.data.categories %}
+      <a href="{{ '/category/' | append: category.slug | append: '/' | relative_url }}">
+        <strong>{{ category.name }}</strong>
+        <span>{{ category.description }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="news-feed">
+  <div class="container">
+    <div class="section-heading">
+      <h2>Recent Articles</h2>
+      <a href="{{ '/search/' | relative_url }}">Search the archive</a>
+    </div>
+    <div class="article-list">
+      {% for post in site.posts offset: 1 limit: 8 %}
+        {% include article-card.html %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="apps-strip">
+  <div class="container apps-grid">
+    <div>
+      <p class="section-label">Apps and Projects</p>
+      <h2>TurtleGPT and newsroom experiments</h2>
+      <p>Tools inspired by the original Turtle News ecosystem, gathered into one cleaner project page.</p>
+    </div>
+    <div class="project-list">
+      {% for app in site.data.apps limit: 3 %}
+        <a href="{{ app.url | relative_url }}">
+          <span>{{ app.status }}</span>
+          <strong>{{ app.name }}</strong>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>

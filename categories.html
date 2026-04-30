@@ -1,0 +1,15 @@
+---
+layout: page
+title: Categories
+description: Browse Turtle News by beat.
+permalink: /categories/
+---
+<div class="directory-grid">
+  {% for category in site.data.categories %}
+    <a class="directory-card" href="{{ '/category/' | append: category.slug | append: '/' | relative_url }}">
+      <h2>{{ category.name }}</h2>
+      <p>{{ category.description }}</p>
+      <span>{{ site.posts | where: "category", category.name | size }} stories</span>
+    </a>
+  {% endfor %}
+</div>

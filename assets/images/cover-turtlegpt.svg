@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Abstract turtle technology cover">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#0e3b2e"/>
+      <stop offset="1" stop-color="#0a1714"/>
+    </linearGradient>
+    <linearGradient id="shell" x1="0" x2="1">
+      <stop offset="0" stop-color="#65c99a"/>
+      <stop offset="1" stop-color="#f2b45f"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="760" fill="url(#bg)"/>
+  <path d="M0 610 C180 560 310 690 500 620 C710 545 825 575 1200 490 L1200 760 L0 760 Z" fill="#123f35"/>
+  <g fill="none" stroke="#d9efe5" stroke-opacity=".22" stroke-width="2">
+    <path d="M155 132 H1040"/>
+    <path d="M155 250 H1040"/>
+    <path d="M155 368 H1040"/>
+    <path d="M155 486 H1040"/>
+    <path d="M280 80 V600"/>
+    <path d="M480 80 V600"/>
+    <path d="M680 80 V600"/>
+    <path d="M880 80 V600"/>
+  </g>
+  <g transform="translate(286 196)">
+    <ellipse cx="330" cy="210" rx="275" ry="168" fill="#0b241f" stroke="#e7f7ee" stroke-width="10"/>
+    <path d="M150 210 C175 92 483 92 510 210 C480 335 180 335 150 210Z" fill="url(#shell)"/>
+    <path d="M235 116 L330 210 L425 116 M208 305 L330 210 L455 305 M330 84 V334" fill="none" stroke="#0b241f" stroke-width="10" stroke-linecap="round"/>
+    <circle cx="626" cy="206" r="58" fill="#65c99a"/>
+    <circle cx="648" cy="190" r="8" fill="#0b241f"/>
+    <path d="M88 186 C26 155 12 250 84 234 M572 130 C620 84 668 118 645 178 M572 292 C628 330 680 285 640 238" fill="none" stroke="#65c99a" stroke-width="28" stroke-linecap="round"/>
+  </g>
+  <g fill="#fff" font-family="Arial, Helvetica, sans-serif">
+    <text x="84" y="96" font-size="34" font-weight="700">TurtleGPT</text>
+    <text x="84" y="140" font-size="22" fill="#cfe8dd">Newsroom tools and experiments</text>
+  </g>
+</svg>

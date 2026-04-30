@@ -1,0 +1,56 @@
+---
+layout: default
+---
+<article class="post">
+  <header class="post-header">
+    <div class="container post-grid">
+      <div class="post-heading">
+        <a class="post-category" href="{{ '/category/' | append: page.category | slugify | append: '/' | relative_url }}">{{ page.category }}</a>
+        <h1>{{ page.title }}</h1>
+        {% if page.excerpt %}
+          <p class="lede">{{ page.excerpt | strip_html }}</p>
+        {% endif %}
+        <div class="post-meta">
+          <span>By {{ page.author }}</span>
+          <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
+        </div>
+      </div>
+      <figure class="post-cover">
+        <img src="{{ page.cover_image | relative_url }}" alt="">
+      </figure>
+    </div>
+  </header>
+
+  <div class="container post-body-grid">
+    <aside class="post-sidebar">
+      <h2>Filed Under</h2>
+      <a href="{{ '/category/' | append: page.category | slugify | append: '/' | relative_url }}">{{ page.category }}</a>
+      {% if page.tags %}
+        <h2>Tags</h2>
+        <div class="tag-list">
+          {% for tag in page.tags %}
+            <a href="{{ '/tags/#' | append: tag | slugify | relative_url }}">{{ tag }}</a>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </aside>
+    <div class="prose post-content">
+      {{ content }}
+    </div>
+  </div>
+</article>
+
+<section class="related-news">
+  <div class="container">
+    <div class="section-heading">
+      <h2>More From Turtle News</h2>
+      <a href="{{ '/news/' | relative_url }}">All articles</a>
+    </div>
+    <div class="article-list compact">
+      {% assign related = site.posts | where_exp: "post", "post.url != page.url" | slice: 0, 3 %}
+      {% for post in related %}
+        {% include article-card.html %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

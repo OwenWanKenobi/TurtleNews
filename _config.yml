@@ -1,0 +1,37 @@
+title: Turtle News
+email: newsroom@turtlenews.org
+description: Independent turtle journalism, strange science, culture, technology, and projects from the Turtle News newsroom.
+url: "https://turtlenews.org"
+baseurl: ""
+lang: en
+timezone: America/New_York
+permalink: /news/:year/:month/:day/:title/
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+      author: Turtle News Staff
+      cover_image: /assets/images/cover-dispatch.svg
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: page
+
+markdown: kramdown
+kramdown:
+  input: GFM
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

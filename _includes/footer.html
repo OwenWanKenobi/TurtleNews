@@ -1,0 +1,27 @@
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div>
+      <a class="brand footer-brand" href="{{ '/' | relative_url }}">
+        <span class="brand-mark">TN</span>
+        <span class="brand-text">
+          <strong>Turtle News</strong>
+          <small>News at shell speed, edited with care.</small>
+        </span>
+      </a>
+    </div>
+    <div>
+      <h2>Sections</h2>
+      {% for category in site.data.categories %}
+        <a href="{{ '/category/' | append: category.slug | append: '/' | relative_url }}">{{ category.name }}</a>
+      {% endfor %}
+    </div>
+    <div>
+      <h2>Newsroom</h2>
+      <a href="{{ '/about/' | relative_url }}">About</a>
+      <a href="{{ '/submit/' | relative_url }}">Submit a tip</a>
+      <a href="{{ '/apps/' | relative_url }}">Apps and projects</a>
+      <a href="{{ '/search/' | relative_url }}">Search</a>
+    </div>
+  </div>
+  <p class="container footer-note">&copy; {{ site.time | date: '%Y' }} Turtle News. Built with Jekyll for GitHub Pages.</p>
+</footer>

@@ -1,0 +1,22 @@
+---
+layout: default
+---
+{% assign tag_name = page.tag_name %}
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="section-label">Tag</p>
+    <h1>{{ tag_name }}</h1>
+    <p class="lede">Stories tagged with {{ tag_name }}.</p>
+  </div>
+</section>
+<section class="archive-section">
+  <div class="container">
+    <div class="article-list">
+      {% for post in site.posts %}
+        {% if post.tags contains tag_name %}
+          {% include article-card.html %}
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>

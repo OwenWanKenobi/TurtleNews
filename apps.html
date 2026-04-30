@@ -1,0 +1,17 @@
+---
+layout: page
+title: Apps and Projects
+description: TurtleGPT, Turtle AI, Turtle Translator, Turtle+, and other Turtle News experiments.
+permalink: /apps/
+---
+<div class="project-directory">
+  {% for app in site.data.apps %}
+    <article class="project-card" id="{{ app.name | slugify }}">
+      <span>{{ app.status }}</span>
+      <h2>{{ app.name }}</h2>
+      <p>{{ app.description }}</p>
+    </article>
+  {% endfor %}
+</div>
+
+<p>Projects here can point to live apps, demos, waitlists, or GitHub repositories as they become available. Update `_data/apps.yml` to add or edit a project.</p>

@@ -1,0 +1,25 @@
+---
+layout: default
+---
+{% assign category_name = page.category_name %}
+{% assign posts = site.posts | where: "category", category_name %}
+<section class="page-hero">
+  <div class="container narrow">
+    <p class="section-label">Category</p>
+    <h1>{{ category_name }}</h1>
+    {% if page.description %}
+      <p class="lede">{{ page.description }}</p>
+    {% endif %}
+  </div>
+</section>
+<section class="archive-section">
+  <div class="container">
+    <div class="article-list">
+      {% for post in posts %}
+        {% include article-card.html %}
+      {% else %}
+        <p>No articles have been filed here yet.</p>
+      {% endfor %}
+    </div>
+  </div>
+</section>

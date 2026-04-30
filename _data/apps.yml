@@ -1,0 +1,16 @@
+- name: TurtleGPT
+  status: Featured
+  description: A conversational turtle intelligence project for fast questions, shell-safe brainstorming, and newsroom experiments.
+  url: /apps/#turtlegpt
+- name: Turtle AI
+  status: Lab
+  description: Lightweight AI tools for turtle-themed summaries, creative prompts, and research exploration.
+  url: /apps/#turtle-ai
+- name: Turtle Translator
+  status: Prototype
+  description: A playful language helper for translating short phrases into turtle-fluent editorial style.
+  url: /apps/#turtle-translator
+- name: Turtle+
+  status: Concept
+  description: A future subscriber hub for newsletters, events, merchandise, and community drops.
+  url: /apps/#turtle-plus

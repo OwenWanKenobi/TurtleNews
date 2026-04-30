@@ -1,0 +1,26 @@
+---
+layout: page
+title: Tags
+description: Browse recurring topics across the Turtle News archive.
+permalink: /tags/
+---
+{% assign sorted_tags = site.tags | sort %}
+<div class="tag-cloud">
+  {% for tag in sorted_tags %}
+    <a href="#{{ tag[0] | slugify }}">{{ tag[0] }} <span>{{ tag[1].size }}</span></a>
+  {% endfor %}
+</div>
+
+{% for tag in sorted_tags %}
+  <section class="tag-section" id="{{ tag[0] | slugify }}">
+    <div class="section-heading">
+      <h2>{{ tag[0] }}</h2>
+      <span>{{ tag[1].size }} stories</span>
+    </div>
+    <div class="article-list">
+      {% for post in tag[1] %}
+        {% include article-card.html %}
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}

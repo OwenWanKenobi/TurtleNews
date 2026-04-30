@@ -1,0 +1,15 @@
+---
+layout: page
+title: Search
+description: Search Turtle News articles by title, category, author, tag, or excerpt.
+permalink: /search/
+---
+<div class="search-panel">
+  <label for="search-input">Search articles</label>
+  <input id="search-input" type="search" placeholder="Try TurtleGPT, evolution, events..." autocomplete="off">
+  <p id="search-count" class="search-count">Start typing to search the archive.</p>
+</div>
+<div id="search-results" class="article-list search-results"></div>
+<noscript>
+  <p>Search needs JavaScript. You can still browse the <a href="{{ '/news/' | relative_url }}">news archive</a>.</p>
+</noscript>

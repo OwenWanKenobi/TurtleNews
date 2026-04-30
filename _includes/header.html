@@ -1,0 +1,30 @@
+<header class="site-header">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="masthead container">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="Turtle News home">
+      <span class="brand-mark">TN</span>
+      <span class="brand-text">
+        <strong>Turtle News</strong>
+        <small>Independent shell desk</small>
+      </span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+    <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+      {% for item in site.data.navigation %}
+        <a href="{{ item.url | relative_url }}">{{ item.title }}</a>
+      {% endfor %}
+    </nav>
+  </div>
+  <div class="category-bar">
+    <div class="container category-scroll" aria-label="Story categories">
+      {% for category in site.data.categories %}
+        <a href="{{ '/category/' | append: category.slug | append: '/' | relative_url }}">{{ category.name }}</a>
+      {% endfor %}
+    </div>
+  </div>
+</header>

@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Community events cover">
+  <rect width="1200" height="760" fill="#fffaf2"/>
+  <rect x="92" y="100" width="1016" height="560" rx="24" fill="#ffffff" stroke="#193b33" stroke-width="8"/>
+  <g fill="#193b33" font-family="Arial, Helvetica, sans-serif">
+    <text x="148" y="178" font-size="44" font-weight="700">Turtle Events</text>
+    <text x="150" y="225" font-size="24" fill="#55736a">Listings, conservation days, community notes</text>
+  </g>
+  <g transform="translate(140 285)" fill="#f0f5ee" stroke="#c8d8ce" stroke-width="4">
+    <rect width="210" height="130" rx="10"/>
+    <rect x="245" width="210" height="130" rx="10"/>
+    <rect x="490" width="210" height="130" rx="10"/>
+    <rect x="735" width="210" height="130" rx="10"/>
+    <rect y="170" width="210" height="130" rx="10"/>
+    <rect x="245" y="170" width="210" height="130" rx="10"/>
+    <rect x="490" y="170" width="210" height="130" rx="10"/>
+    <rect x="735" y="170" width="210" height="130" rx="10"/>
+  </g>
+  <g transform="translate(435 338)">
+    <ellipse cx="170" cy="92" rx="132" ry="78" fill="#123f35"/>
+    <path d="M84 94 C99 34 238 32 255 94 C235 150 105 152 84 94Z" fill="#6fbe8f"/>
+    <circle cx="322" cy="90" r="34" fill="#123f35"/>
+    <circle cx="333" cy="79" r="5" fill="#fffaf2"/>
+  </g>
+</svg>

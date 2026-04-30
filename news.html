@@ -1,0 +1,11 @@
+---
+layout: page
+title: News
+description: The full Turtle News article archive, newest first.
+permalink: /news/
+---
+<div class="article-list">
+  {% for post in site.posts %}
+    {% include article-card.html %}
+  {% endfor %}
+</div>

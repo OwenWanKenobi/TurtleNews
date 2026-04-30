@@ -1,0 +1,15 @@
+- name: Science
+  slug: science
+  description: Research, evolution, archaeology, conservation, and the weird edge of turtle knowledge.
+- name: Culture
+  slug: culture
+  description: Turtle stories in entertainment, lifestyle, internet culture, and public life.
+- name: Technology
+  slug: technology
+  description: TurtleGPT, Turtle AI, translators, apps, data tools, and newsroom experiments.
+- name: World
+  slug: world
+  description: Global turtle dispatches, policy, rescue stories, and environmental reporting.
+- name: Opinion
+  slug: opinion
+  description: Columns, satire, arguments, and sharp little takes from the shell desk.

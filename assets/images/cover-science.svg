@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-label="Fossil shell science cover">
+  <rect width="1200" height="760" fill="#f4efe7"/>
+  <path d="M0 560 C170 510 315 610 510 545 C725 472 845 525 1200 440 L1200 760 L0 760 Z" fill="#dfe7d6"/>
+  <g transform="translate(285 126)">
+    <ellipse cx="315" cy="270" rx="300" ry="190" fill="#213c33"/>
+    <path d="M120 280 C145 108 490 95 525 282 C486 438 166 440 120 280Z" fill="#d7b273"/>
+    <path d="M210 142 L320 280 L430 142 M178 395 L320 280 L465 397 M320 105 V455" fill="none" stroke="#77572b" stroke-width="12" stroke-linecap="round"/>
+    <circle cx="646" cy="270" r="68" fill="#355a4d"/>
+    <circle cx="668" cy="250" r="9" fill="#f4efe7"/>
+    <path d="M74 250 C6 214 -10 324 73 304 M585 170 C650 112 710 160 672 250 M585 372 C658 424 724 362 672 292" fill="none" stroke="#355a4d" stroke-width="34" stroke-linecap="round"/>
+  </g>
+  <g fill="none" stroke="#a58b61" stroke-width="4" stroke-linecap="round" opacity=".55">
+    <path d="M92 150 C160 108 230 118 286 166"/>
+    <path d="M850 124 C925 72 1020 93 1088 160"/>
+    <path d="M878 618 C960 568 1030 582 1110 642"/>
+  </g>
+  <text x="76" y="100" fill="#18352d" font-family="Arial, Helvetica, sans-serif" font-size="34" font-weight="700">Science Desk</text>
+</svg>
